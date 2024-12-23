@@ -1,0 +1,10 @@
+
+
+qfunc main(output cntrl: qbit[], output target: qbit) {
+  allocate(5, cntrl);
+  allocate(1, target);
+  hadamard_transform(cntrl);
+  control (cntrl) {
+    X(target);
+  }
+}
